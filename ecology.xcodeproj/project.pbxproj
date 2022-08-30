@@ -7,13 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0DF798D428BDF6E200B0DACD /* ecologyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF798D328BDF6E200B0DACD /* ecologyApp.swift */; };
-		0DF798D628BDF6E200B0DACD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF798D528BDF6E200B0DACD /* ContentView.swift */; };
-		0DF798D828BDF6E300B0DACD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DF798D728BDF6E300B0DACD /* Assets.xcassets */; };
-		0DF798DB28BDF6E300B0DACD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DF798DA28BDF6E300B0DACD /* Preview Assets.xcassets */; };
-		0DF798E528BDF6E300B0DACD /* ecologyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF798E428BDF6E300B0DACD /* ecologyTests.swift */; };
-		0DF798EF28BDF6E300B0DACD /* ecologyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF798EE28BDF6E300B0DACD /* ecologyUITests.swift */; };
-		0DF798F128BDF6E300B0DACD /* ecologyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF798F028BDF6E300B0DACD /* ecologyUITestsLaunchTests.swift */; };
+		0DF7991228BDF70E00B0DACD /* RegistrationStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF798FE28BDF70D00B0DACD /* RegistrationStatus.swift */; };
+		0DF7991328BDF70E00B0DACD /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF7990028BDF70D00B0DACD /* MenuView.swift */; };
+		0DF7991428BDF70E00B0DACD /* Preview Content in Resources */ = {isa = PBXBuildFile; fileRef = 0DF7990128BDF70D00B0DACD /* Preview Content */; };
+		0DF7991528BDF70E00B0DACD /* Registration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF7990228BDF70D00B0DACD /* Registration.swift */; };
+		0DF7991628BDF70E00B0DACD /* GalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF7990328BDF70D00B0DACD /* GalleryViewModel.swift */; };
+		0DF7991828BDF70E00B0DACD /* ImageDetailGps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF7990528BDF70D00B0DACD /* ImageDetailGps.swift */; };
+		0DF7991928BDF70E00B0DACD /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF7990628BDF70D00B0DACD /* CameraView.swift */; };
+		0DF7991A28BDF70E00B0DACD /* ecologyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF7990728BDF70D00B0DACD /* ecologyApp.swift */; };
+		0DF7991B28BDF70E00B0DACD /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF7990828BDF70D00B0DACD /* CameraViewModel.swift */; };
+		0DF7991C28BDF70E00B0DACD /* ImageDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF7990928BDF70D00B0DACD /* ImageDetail.swift */; };
+		0DF7991D28BDF70E00B0DACD /* ImageDetailGpsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF7990A28BDF70D00B0DACD /* ImageDetailGpsView.swift */; };
+		0DF7991E28BDF70E00B0DACD /* GalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF7990B28BDF70E00B0DACD /* GalleryView.swift */; };
+		0DF7991F28BDF70E00B0DACD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DF7990C28BDF70E00B0DACD /* Assets.xcassets */; };
+		0DF7992028BDF70E00B0DACD /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF7990D28BDF70E00B0DACD /* Camera.swift */; };
+		0DF7992128BDF70E00B0DACD /* Gallery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF7990E28BDF70E00B0DACD /* Gallery.swift */; };
+		0DF7992228BDF70E00B0DACD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF7990F28BDF70E00B0DACD /* ContentView.swift */; };
+		0DF7992328BDF70E00B0DACD /* ImageRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF7991028BDF70E00B0DACD /* ImageRegistration.swift */; };
+		0DF7992428BDF70E00B0DACD /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF7991128BDF70E00B0DACD /* LocationService.swift */; };
+		0DF7992628BDF96A00B0DACD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DF7992528BDF96A00B0DACD /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,15 +47,30 @@
 
 /* Begin PBXFileReference section */
 		0DF798D028BDF6E200B0DACD /* ecology.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ecology.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		0DF798D328BDF6E200B0DACD /* ecologyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ecologyApp.swift; sourceTree = "<group>"; };
-		0DF798D528BDF6E200B0DACD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		0DF798D728BDF6E300B0DACD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		0DF798DA28BDF6E300B0DACD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0DF798E028BDF6E300B0DACD /* ecologyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ecologyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0DF798E428BDF6E300B0DACD /* ecologyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ecologyTests.swift; sourceTree = "<group>"; };
 		0DF798EA28BDF6E300B0DACD /* ecologyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ecologyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0DF798EE28BDF6E300B0DACD /* ecologyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ecologyUITests.swift; sourceTree = "<group>"; };
-		0DF798F028BDF6E300B0DACD /* ecologyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ecologyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0DF798FD28BDF70D00B0DACD /* ecology-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ecology-Bridging-Header.h"; sourceTree = "<group>"; };
+		0DF798FE28BDF70D00B0DACD /* RegistrationStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationStatus.swift; sourceTree = "<group>"; };
+		0DF798FF28BDF70D00B0DACD /* ecology.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = ecology.entitlements; sourceTree = "<group>"; };
+		0DF7990028BDF70D00B0DACD /* MenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		0DF7990128BDF70D00B0DACD /* Preview Content */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "Preview Content"; path = "../../../../../Downloads/ecology-master 2/ecology/Preview Content"; sourceTree = "<group>"; };
+		0DF7990228BDF70D00B0DACD /* Registration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Registration.swift; sourceTree = "<group>"; };
+		0DF7990328BDF70D00B0DACD /* GalleryViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryViewModel.swift; sourceTree = "<group>"; };
+		0DF7990428BDF70D00B0DACD /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0DF7990528BDF70D00B0DACD /* ImageDetailGps.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDetailGps.swift; sourceTree = "<group>"; };
+		0DF7990628BDF70D00B0DACD /* CameraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		0DF7990728BDF70D00B0DACD /* ecologyApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ecologyApp.swift; path = "../../../../../Downloads/ecology-master 2/ecology/ecologyApp.swift"; sourceTree = "<group>"; };
+		0DF7990828BDF70D00B0DACD /* CameraViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
+		0DF7990928BDF70D00B0DACD /* ImageDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDetail.swift; sourceTree = "<group>"; };
+		0DF7990A28BDF70D00B0DACD /* ImageDetailGpsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDetailGpsView.swift; sourceTree = "<group>"; };
+		0DF7990B28BDF70E00B0DACD /* GalleryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryView.swift; sourceTree = "<group>"; };
+		0DF7990C28BDF70E00B0DACD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "../../../../../Downloads/ecology-master 2/ecology/Assets.xcassets"; sourceTree = "<group>"; };
+		0DF7990D28BDF70E00B0DACD /* Camera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
+		0DF7990E28BDF70E00B0DACD /* Gallery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gallery.swift; sourceTree = "<group>"; };
+		0DF7990F28BDF70E00B0DACD /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentView.swift; path = "../../../../../Downloads/ecology-master 2/ecology/ContentView.swift"; sourceTree = "<group>"; };
+		0DF7991028BDF70E00B0DACD /* ImageRegistration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageRegistration.swift; sourceTree = "<group>"; };
+		0DF7991128BDF70E00B0DACD /* LocationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		0DF7992528BDF96A00B0DACD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,9 +101,8 @@
 		0DF798C728BDF6E200B0DACD = {
 			isa = PBXGroup;
 			children = (
+				0DF7992528BDF96A00B0DACD /* Preview Assets.xcassets */,
 				0DF798D228BDF6E200B0DACD /* ecology */,
-				0DF798E328BDF6E300B0DACD /* ecologyTests */,
-				0DF798ED28BDF6E300B0DACD /* ecologyUITests */,
 				0DF798D128BDF6E200B0DACD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -94,37 +120,29 @@
 		0DF798D228BDF6E200B0DACD /* ecology */ = {
 			isa = PBXGroup;
 			children = (
-				0DF798D328BDF6E200B0DACD /* ecologyApp.swift */,
-				0DF798D528BDF6E200B0DACD /* ContentView.swift */,
-				0DF798D728BDF6E300B0DACD /* Assets.xcassets */,
-				0DF798D928BDF6E300B0DACD /* Preview Content */,
+				0DF7990C28BDF70E00B0DACD /* Assets.xcassets */,
+				0DF7990D28BDF70E00B0DACD /* Camera.swift */,
+				0DF7990628BDF70D00B0DACD /* CameraView.swift */,
+				0DF7990828BDF70D00B0DACD /* CameraViewModel.swift */,
+				0DF7990F28BDF70E00B0DACD /* ContentView.swift */,
+				0DF798FF28BDF70D00B0DACD /* ecology.entitlements */,
+				0DF7990728BDF70D00B0DACD /* ecologyApp.swift */,
+				0DF7990E28BDF70E00B0DACD /* Gallery.swift */,
+				0DF7990B28BDF70E00B0DACD /* GalleryView.swift */,
+				0DF7990328BDF70D00B0DACD /* GalleryViewModel.swift */,
+				0DF7990928BDF70D00B0DACD /* ImageDetail.swift */,
+				0DF7990528BDF70D00B0DACD /* ImageDetailGps.swift */,
+				0DF7990A28BDF70D00B0DACD /* ImageDetailGpsView.swift */,
+				0DF7991028BDF70E00B0DACD /* ImageRegistration.swift */,
+				0DF7990428BDF70D00B0DACD /* Info.plist */,
+				0DF7991128BDF70E00B0DACD /* LocationService.swift */,
+				0DF7990028BDF70D00B0DACD /* MenuView.swift */,
+				0DF7990128BDF70D00B0DACD /* Preview Content */,
+				0DF7990228BDF70D00B0DACD /* Registration.swift */,
+				0DF798FE28BDF70D00B0DACD /* RegistrationStatus.swift */,
+				0DF798FD28BDF70D00B0DACD /* ecology-Bridging-Header.h */,
 			);
 			path = ecology;
-			sourceTree = "<group>";
-		};
-		0DF798D928BDF6E300B0DACD /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				0DF798DA28BDF6E300B0DACD /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		0DF798E328BDF6E300B0DACD /* ecologyTests */ = {
-			isa = PBXGroup;
-			children = (
-				0DF798E428BDF6E300B0DACD /* ecologyTests.swift */,
-			);
-			path = ecologyTests;
-			sourceTree = "<group>";
-		};
-		0DF798ED28BDF6E300B0DACD /* ecologyUITests */ = {
-			isa = PBXGroup;
-			children = (
-				0DF798EE28BDF6E300B0DACD /* ecologyUITests.swift */,
-				0DF798F028BDF6E300B0DACD /* ecologyUITestsLaunchTests.swift */,
-			);
-			path = ecologyUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,6 +213,7 @@
 				TargetAttributes = {
 					0DF798CF28BDF6E200B0DACD = {
 						CreatedOnToolsVersion = 13.4.1;
+						LastSwiftMigration = 1340;
 					};
 					0DF798DF28BDF6E300B0DACD = {
 						CreatedOnToolsVersion = 13.4.1;
@@ -231,8 +250,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0DF798DB28BDF6E300B0DACD /* Preview Assets.xcassets in Resources */,
-				0DF798D828BDF6E300B0DACD /* Assets.xcassets in Resources */,
+				0DF7991F28BDF70E00B0DACD /* Assets.xcassets in Resources */,
+				0DF7991428BDF70E00B0DACD /* Preview Content in Resources */,
+				0DF7992628BDF96A00B0DACD /* Preview Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,8 +277,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0DF798D628BDF6E200B0DACD /* ContentView.swift in Sources */,
-				0DF798D428BDF6E200B0DACD /* ecologyApp.swift in Sources */,
+				0DF7991828BDF70E00B0DACD /* ImageDetailGps.swift in Sources */,
+				0DF7991228BDF70E00B0DACD /* RegistrationStatus.swift in Sources */,
+				0DF7992228BDF70E00B0DACD /* ContentView.swift in Sources */,
+				0DF7992128BDF70E00B0DACD /* Gallery.swift in Sources */,
+				0DF7991D28BDF70E00B0DACD /* ImageDetailGpsView.swift in Sources */,
+				0DF7991628BDF70E00B0DACD /* GalleryViewModel.swift in Sources */,
+				0DF7991928BDF70E00B0DACD /* CameraView.swift in Sources */,
+				0DF7992328BDF70E00B0DACD /* ImageRegistration.swift in Sources */,
+				0DF7991528BDF70E00B0DACD /* Registration.swift in Sources */,
+				0DF7991B28BDF70E00B0DACD /* CameraViewModel.swift in Sources */,
+				0DF7992428BDF70E00B0DACD /* LocationService.swift in Sources */,
+				0DF7991C28BDF70E00B0DACD /* ImageDetail.swift in Sources */,
+				0DF7992028BDF70E00B0DACD /* Camera.swift in Sources */,
+				0DF7991E28BDF70E00B0DACD /* GalleryView.swift in Sources */,
+				0DF7991A28BDF70E00B0DACD /* ecologyApp.swift in Sources */,
+				0DF7991328BDF70E00B0DACD /* MenuView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,7 +300,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0DF798E528BDF6E300B0DACD /* ecologyTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,8 +307,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0DF798EF28BDF6E300B0DACD /* ecologyUITests.swift in Sources */,
-				0DF798F128BDF6E300B0DACD /* ecologyUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,14 +445,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ecology/Preview Content\"";
+				DEVELOPMENT_TEAM = P4G4J87BM2;
 				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				"INFOPLIST_FILE[sdk=*]" = ecology/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -432,8 +467,10 @@
 				PRODUCT_BUNDLE_IDENTIFIER = sundosoft.ecology;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "ecology/ecology-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -442,14 +479,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ecology/Preview Content\"";
+				DEVELOPMENT_TEAM = P4G4J87BM2;
 				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				"INFOPLIST_FILE[sdk=*]" = ecology/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -460,8 +501,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = sundosoft.ecology;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "ecology/ecology-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
