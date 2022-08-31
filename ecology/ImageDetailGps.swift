@@ -7,16 +7,13 @@
 import SwiftUI
 import MapKit
 class ImageDetailGps: NSObject, ObservableObject {
-    let location : String = ImageDetailGpsView.location
-    @State static var region: MKCoordinateRegion = MKCoordinateRegion()
-    override init(){
-        ImageDetailGps.region = ImageDetailGps.setRegion(location:location)
-    }
     static func getLatitude(location: String)->Double{
         do{
             let jsonData = location.data(using:.utf8)
             let jsonObj = try JSONSerialization.jsonObject(with:jsonData!,options:.allowFragments) as?Dictionary<String,Any>
-            let latitude : Double = (String(describing: jsonObj?["latitude"]) as NSString).doubleValue
+            //let latitude : Double = (String(describing: jsonObj?["latitude"]) as NSString).doubleValue
+            let latitude : Double = jsonObj!["latitude"] as! Double
+            print(latitude)
             return latitude
         }catch let error{
             print(error)
@@ -27,7 +24,9 @@ class ImageDetailGps: NSObject, ObservableObject {
         do{
             let jsonData = location.data(using:.utf8)
             let jsonObj = try JSONSerialization.jsonObject(with:jsonData!,options:.allowFragments) as? Dictionary<String,Any>
-            let longitude: Double = (String(describing: jsonObj?["longitude"]) as NSString).doubleValue
+            //let longitude: Double = (String(describing: jsonObj?["longitude"]) as NSString).doubleValue
+            let longitude : Double = jsonObj!["longitude"] as! Double
+            print(longitude)
             return longitude
         }catch let error{
             print(error)
@@ -38,7 +37,9 @@ class ImageDetailGps: NSObject, ObservableObject {
         do{
             let jsonData = location.data(using:.utf8)
             let jsonObj = try JSONSerialization.jsonObject(with:jsonData!,options:.allowFragments) as?Dictionary<String,Any>
-            let altitude : Double = (String(describing:jsonObj?["altitude"]) as NSString).doubleValue
+            //let altitude : Double = (String(describing:jsonObj?["altitude"]) as NSString).doubleValue
+            let altitude : Double = jsonObj!["altitude"] as! Double
+            print(altitude)
             return altitude
         }catch let error{
             print(error)
@@ -48,10 +49,7 @@ class ImageDetailGps: NSObject, ObservableObject {
     static func setMarker(lat: Double, lon:Double)->[Place]{
         return [Place(lat: lat, long: lon)]
     }
-    static func setRegion(location: String)->MKCoordinateRegion{
-        let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: getLatitude(location:location), longitude: getLongitude(location:location)), span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
-        return region
-    }
+    
     
 }
 

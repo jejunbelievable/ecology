@@ -12,15 +12,19 @@ import Combine
 
 struct ImageDetailGpsView: View{
     let columns = [GridItem(.flexible())]
-    @State static var location: String = ""
     @Binding var loc : String
+    @State var region: MKCoordinateRegion = MKCoordinateRegion()
+    init(loc:Binding<String>){
+        self._loc = loc
+    }
     var body: some View{
         
         VStack{
-            Map(coordinateRegion: ImageDetailGps.$region, showsUserLocation: true, annotationItems: [Place(lat: ImageDetailGps.getLatitude(location:self.loc), long: ImageDetailGps.getLongitude(location:self.loc))]){marker in
-                MapMarker(coordinate: marker.location, tint: Color.red)
+            Map(coordinateRegion: $region, showsUserLocation: true, annotationItems: [Place(lat: ImageDetailGps.getLatitude(location:self.loc), long: ImageDetailGps.getLongitude(location:self.loc))]){marker in
+                MapMarker(coordinate:CLLocationCoordinate2D(latitude:ImageDetailGps.getLatitude(location:self.loc),longitude:ImageDetailGps.getLongitude(location:self.loc)), tint: Color.red)
+            }.onAppear{
+                region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: ImageDetailGps.getLatitude(location:self.loc), longitude: ImageDetailGps.getLongitude(location:self.loc)), span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
             }.edgesIgnoringSafeArea(.all)
-            
             
             LazyVGrid(columns: columns){
                 ForEach((0...7), id: \.self){ _ in
@@ -40,7 +44,5 @@ struct ImageDetailGpsView: View{
         }
         .navigationTitle("현장조사지원앱")
     }
-    
-    
 }
 

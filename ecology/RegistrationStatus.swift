@@ -12,11 +12,14 @@ import MapKit
 struct RegistrationStatus: View{
     @State private var isClicked  = false
     @Binding var showMenu : Bool
-    
+    @State var latitude: Double = 37
+    @State var longitude: Double = 126
+    @State var region:MKCoordinateRegion = MKCoordinateRegion()
+    let locationService = LocationService()
     var body: some View{
         ZStack{
             Color.gray.ignoresSafeArea()
-            VStack{
+            ScrollView{
                 Text("등록현황")
                     .font(.title)
                     .padding()
@@ -63,9 +66,13 @@ struct RegistrationStatus: View{
                     .overlay(VStack{
                         Text("현재위치")
                             .font(.title3)
-                        Button{
+                        Button(action:{
                             self.isClicked = true
-                        }label: {
+                            latitude = locationService.manager.location?.coordinate.latitude ?? 37
+                            longitude = locationService.manager.location?.coordinate.longitude ?? 126
+                            print(latitude)
+                            print(longitude)
+                        }){
                             Text("내 위치 확인하기")
                                 .font(.title3)
                                 .foregroundColor(Color.white)
@@ -73,13 +80,18 @@ struct RegistrationStatus: View{
                                 .background(Color.init(red: 0, green: 100/255, blue: 70/255))
                                 .clipShape(RoundedRectangle(cornerRadius: 10))
                         }
-                        Text("내 위치는 Latitude : 37.1234")
+                        Text("내 위치는 Latitude : \(latitude)")
                             .font(.body)
-                        Text("Longitude : 126.12332")
+                        Text("Longitude : \(longitude)")
                             .font(.body)
                         
                     })
                     .padding()
+                Map(coordinateRegion: $region, showsUserLocation: true, annotationItems: [Place(lat: latitude, long: longitude)]){marker in
+                    MapMarker(coordinate:CLLocationCoordinate2D(latitude:latitude,longitude:longitude), tint: Color.red)
+                    }.onAppear{
+                        region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
+                    }
             }
         }
         .navigationBarBackButtonHidden(true)

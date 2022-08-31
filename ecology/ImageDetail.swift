@@ -11,8 +11,12 @@ import MapKit
 
 struct ImageDetail: View{
     let columns = [GridItem(.flexible()),GridItem(.flexible())]
-    @Binding var loc: String
-    @Binding var image: UIImage
+    @State var loc: String
+    @State var image: UIImage
+    init(loc:String,image:UIImage){
+        self.loc = loc
+        self.image = image
+    }
     var body: some View{
         
         VStack{

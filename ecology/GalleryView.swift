@@ -43,25 +43,25 @@ struct GalleryView: View{
                                  deleteList.append(setItems()[index].image)
                              }
                          }){
-                            Image(uiImage:setItems()[index].image)
+                             Image(uiImage:setItems()[index].image)
                                  .resizable()
                                  .aspectRatio(contentMode: .fit)
                                  .frame(width: 30)
                                  .padding()
                           }
                       }else{
-                          NavigationLink(destination: ImageDetail(loc:setItems()[index].$location,image:setItems()[index].$image)){
+                          NavigationLink(destination: ImageDetail(loc:setItems()[index].location,image:setItems()[index].image)){
                               Image(uiImage:setItems()[index].image)
                                   .resizable()
                                   .aspectRatio(contentMode: .fit)
                                   .cornerRadius(15)
-                                  .frame(width: 130, height:130)
+                                  .frame(width: 80, height: 80)
                                   .padding()
                           }
                       }
                     }
                 }
-              }
+            }
             if(deleteToggle){
                 Button{
                     for image in deleteList{
