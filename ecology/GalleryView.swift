@@ -12,8 +12,8 @@ import UIKit
 struct GalleryView: View{
     @State var deleteList = [UIImage]()
     @State private var deleteToggle = false
-    @State private var items = [Item]()
-    @ObservedObject var viewModel = GalleryViewModel()
+    @State private var items = setItems()
+    @State private var imageList = loadImages()
     let columns = [GridItem(.flexible()),GridItem(.flexible()),GridItem(.flexible())]
     var body: some View{
         VStack {
@@ -34,29 +34,31 @@ struct GalleryView: View{
             }
             ScrollView{
                 LazyVGrid(columns: columns){
-                    ForEach(0..<viewModel.length,id:\.self){ index in
+                    ForEach(0..<items.count,id:\.self){ index in
                       if(deleteToggle){
                          Button(action: {
-                             if let i = deleteList.firstIndex(of: setItems()[index].image){
+                             if let i = deleteList.firstIndex(of: items[index].image){
                                  deleteList.remove(at: i)
                              }else{
-                                 deleteList.append(setItems()[index].image)
+                                 deleteList.append(items[index].image)
                              }
                          }){
-                             Image(uiImage:setItems()[index].image)
+                             Image(uiImage:items[index].image)
                                  .resizable()
                                  .aspectRatio(contentMode: .fit)
                                  .frame(width: 30)
                                  .padding()
+                             Spacer()
                           }
                       }else{
-                          NavigationLink(destination: ImageDetail(loc:setItems()[index].location,image:setItems()[index].image)){
-                              Image(uiImage:setItems()[index].image)
+                          NavigationLink(destination: ImageDetail(loc:items[index].location,image:items[index].image)){
+                              Image(uiImage:items[index].image)
                                   .resizable()
-                                  .aspectRatio(contentMode: .fit)
+                                  .aspectRatio(contentMode: .fill)
                                   .cornerRadius(15)
-                                  .frame(width: 80, height: 80)
-                                  .padding()
+                                  .frame(width: 80, height:50)
+                                  .padding(10)
+                              Spacer()
                           }
                       }
                     }
@@ -65,8 +67,8 @@ struct GalleryView: View{
             if(deleteToggle){
                 Button{
                     for image in deleteList{
-                        if let i = viewModel.imageList.firstIndex(of: image){
-                            viewModel.imageList.remove(at: i)
+                        if let i = imageList.firstIndex(of: image){
+                            imageList.remove(at: i)
                         }
                     }
                     deleteList.removeAll()
@@ -83,7 +85,7 @@ struct GalleryView: View{
         }
         .navigationTitle("현장조사지원앱")
     }
-    func loadImages() -> [UIImage] {
+    static func loadImages() -> [UIImage] {
         let fm = FileManager.default
         let homeDirURL : URL = fm.urls(for: .documentDirectory, in: .userDomainMask).first!.appendingPathComponent("images")
         var images: [UIImage] = []
@@ -102,7 +104,7 @@ struct GalleryView: View{
             return []
         }
     }
-    func loadLocation()->[String]{
+    static func loadLocation()->[String]{
         let fm = FileManager.default
         let homeDirURL : URL = fm.urls(for: .documentDirectory, in: .userDomainMask).first!.appendingPathComponent("location")
         var locations : [String] = []
@@ -135,7 +137,7 @@ struct GalleryView: View{
         }
     }
    
-    func setItems()->[Item]{
+    static func setItems()->[Item]{
         var items: [Item] = []
         let imageList: [UIImage] = loadImages()
         let locations: [String] = loadLocation()
@@ -148,10 +150,11 @@ struct GalleryView: View{
     }
     
     
-    struct Item: Identifiable{
-        @State var image: UIImage
-        @State var location: String
-        @State var id = UUID()
+    struct Item: Identifiable, Hashable{
+        var id = UUID()
+        let image: UIImage
+        let location: String
+        var isChecked = false
     }
 }
 

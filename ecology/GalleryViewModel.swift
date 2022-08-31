@@ -9,10 +9,10 @@ import AVFoundation
 import Combine
 class GalleryViewModel: ObservableObject {
     private let model: Gallery
-    var imageList: [UIImage]
-    var locations: [String]
-    var items: [Gallery.Item]
-    var length: Int
+    @Published var imageList: [UIImage]
+    @Published var locations: [String]
+    @Published var items: [Gallery.Item]
+    @Published var length: Int
     init(){
         model = Gallery()
         imageList = model.imageList

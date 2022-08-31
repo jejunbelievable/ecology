@@ -20,7 +20,7 @@ struct ImageDetailGpsView: View{
     var body: some View{
         
         VStack{
-            Map(coordinateRegion: $region, showsUserLocation: true, annotationItems: [Place(lat: ImageDetailGps.getLatitude(location:self.loc), long: ImageDetailGps.getLongitude(location:self.loc))]){marker in
+            Map(coordinateRegion: $region, showsUserLocation: false, annotationItems: [Place(lat: ImageDetailGps.getLatitude(location:self.loc), long: ImageDetailGps.getLongitude(location:self.loc))]){marker in
                 MapMarker(coordinate:CLLocationCoordinate2D(latitude:ImageDetailGps.getLatitude(location:self.loc),longitude:ImageDetailGps.getLongitude(location:self.loc)), tint: Color.red)
             }.onAppear{
                 region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: ImageDetailGps.getLatitude(location:self.loc), longitude: ImageDetailGps.getLongitude(location:self.loc)), span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))

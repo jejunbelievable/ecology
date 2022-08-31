@@ -29,7 +29,7 @@ struct MenuView: View{
                         .padding([.leading, .bottom], 10.0)
                     Text("홈으로")
                         .font(.title3)
-                        .foregroundColor(Color.black)
+                        .foregroundColor(Color.white)
                         .padding()
                 }
             }
@@ -43,7 +43,7 @@ struct MenuView: View{
                         .padding([.leading, .bottom], 10.0)
                     Text("사용안내")
                         .font(.title3)
-                        .foregroundColor(Color.black)
+                        .foregroundColor(Color.white)
                         .padding()
                 }
             }
@@ -57,7 +57,7 @@ struct MenuView: View{
                         .padding([.leading, .bottom], 10.0)
                     Text("등록현황")
                         .font(.title3)
-                        .foregroundColor(Color.black)
+                        .foregroundColor(Color.white)
                         .padding()
                 }
             }
@@ -71,7 +71,7 @@ struct MenuView: View{
                         .padding([.leading, .bottom], 10.0)
                     Text("GPS 경로보기")
                         .font(.title3)
-                        .foregroundColor(Color.black)
+                        .foregroundColor(Color.white)
                         .padding()
                 }
             }

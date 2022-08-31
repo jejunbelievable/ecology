@@ -7,10 +7,17 @@
 import SwiftUI
 
 class Gallery: NSObject, ObservableObject {
-    var imageList: [UIImage] = loadImages()
-    var locations: [String] = loadLocation()
-    @State var items: [Item] = setItems()
-    static func loadImages() -> [UIImage] {
+    var imageList: [UIImage] = []
+    var locations: [String] = []
+    var items: [Item] = []
+    override init(){
+        super.init()
+        imageList = loadImages()
+        locations = loadLocation()
+        items = setItems()
+    }
+    
+    func loadImages() -> [UIImage] {
         let fm = FileManager.default
         let homeDirURL : URL = fm.urls(for: .documentDirectory, in: .userDomainMask).first!.appendingPathComponent("images")
         var images: [UIImage] = []
@@ -29,7 +36,7 @@ class Gallery: NSObject, ObservableObject {
             return []
         }
     }
-    static func loadLocation()->[String]{
+    func loadLocation()->[String]{
         let fm = FileManager.default
         let homeDirURL : URL = fm.urls(for: .documentDirectory, in: .userDomainMask).first!.appendingPathComponent("location")
         var locations : [String] = []
@@ -61,19 +68,20 @@ class Gallery: NSObject, ObservableObject {
             return []
         }
     }
-    static func setItems()->[Gallery.Item]{
+    func setItems()->[Gallery.Item]{
         var items: [Item] = []
         let imageList: [UIImage] = loadImages()
         let locations: [String] = loadLocation()
         for i in stride(from:0, to:imageList.count,by:1){
-            let item = Item(image: imageList[i],location:locations[i],id:i)
+            let item = Item(image: imageList[i],location:locations[i])
             items.append(item)
         }
         return items
     }
     struct Item: Identifiable, Hashable{
+        var id = UUID()
         let image: UIImage
         let location: String
-        let id : Int
+        var isChecked = false
     }
 }
