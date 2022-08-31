@@ -62,7 +62,7 @@ struct MenuView: View{
                 }
             }
             
-            NavigationLink(destination: RegistrationStatus(showMenu: self.$showMenu)){
+            NavigationLink(destination: GpsRouteView(showMenu: self.$showMenu)){
                 HStack{
                     Image("document")
                         .resizable()
